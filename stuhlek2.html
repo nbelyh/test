@@ -975,11 +975,9 @@ tr.off td:nth-child(3) {
 
 var $panelTpl = $("#panel").html();
 
-var $panelPisten = $(Mustache.render($panelTpl, {id: "Pisten"}))
-$("#diagram-sidebar").append($panelPisten)
-
-var $panelLifte = $(Mustache.render($panelTpl, {id: "Lifte"})))
-$("#diagram-sidebar").append($panelLifte)
+var $sidebar = $("#diagram-sidebar");
+var $panelLifte = $(Mustache.render($panelTpl, {id: "Lifte"})).appendTo($sidebar).find(".panel-body")
+var $panelPisten = $(Mustache.render($panelTpl, {id: "Pisten"})).appendTo($sidebar).find(".panel-body")
 
 $.get("https://crossorigin.me/http://www.stuhleck.at/html/D/lifte.asp", function (data) {
     var $t1 = $("<table class='table table-striped'><thead><tr><th>Lift</th><th>Name</th><th>Status</th></tr></thead></table>")
