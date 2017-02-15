@@ -23,7 +23,7 @@
 <div id="{{id}}" class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-{{id}}">{{id}}</a>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse-{{id}}">{{id}}</a>
         </h4>
     </div>
     <div id="collapse-{{id}}" class="panel-collapse collapse in">
@@ -974,8 +974,12 @@ tr.off td:nth-child(3) {
     (function (diagram) { $("#shape-links > .panel-heading a").text("Data");
 
 var $panelTpl = $("#panel").html();
-var $panelPisten = $("#diagram-sidebar").append(Mustache.render($panelTpl, {id: "Pisten"}))
-var $panelLifte = $("#diagram-sidebar").append(Mustache.render($panelTpl, {id: "Lifte"}))
+
+var $panelPisten = $(Mustache.render($panelTpl, {id: "Pisten"}))
+$("#diagram-sidebar").append($panelPisten)
+
+var $panelLifte = $(Mustache.render($panelTpl, {id: "Lifte"})))
+$("#diagram-sidebar").append($panelLifte)
 
 $.get("https://crossorigin.me/http://www.stuhleck.at/html/D/lifte.asp", function (data) {
     var $t1 = $("<table class='table table-striped'><thead><tr><th>Lift</th><th>Name</th><th>Status</th></tr></thead></table>")
