@@ -12,7 +12,7 @@
 
     <link href="vp/vp-style-1.1.1.min.css" rel="stylesheet" />
     <script>
-        window.svgpublish = {"shapes":{},"pages":[{"Name":"Page-1","Id":0}],"currentPage":{"Name":"Page-1","Id":0},"layers":[],"enableProps":false,"enableLinks":false,"enablePages":false,"enableSearch":false,"enableCode":true,"enableSidebar":true,"enableTooltips":false,"enableSelection":false,"enableLayers":false,"enableFollowHyperlinks":false,"openHyperlinksInNewWindow":false}
+        window.svgpublish = {"shapes":{"shape1":{"Layers":[],"SearchText":"AAA  "},"shape2":{"Layers":[],"SearchText":"BBB  "},"shape3":{"Layers":[],"SearchText":"CCC  "},"shape4":{"Layers":[],"SearchText":"DDD  "}},"pages":[{"Name":"Page-1","Id":0}],"currentPage":{"Name":"Page-1","Id":0},"layers":[],"enableProps":false,"enableLinks":false,"enablePages":false,"enableSearch":true,"enableCode":true,"enableSidebar":true,"enableTooltips":false,"enableSelection":false,"enableLayers":false,"enableFollowHyperlinks":false,"openHyperlinksInNewWindow":false}
         $(document).ready(function () { $("div.svg").panzoom({ svg: $("div.svg > svg").get(0), viewBox: "0 0 595.276 841.89" }).removeClass("appear"); });
     </script>
     <script src="vp/vp-script-1.1.1.min.js"></script>
@@ -21,7 +21,26 @@
     
     <div id="diagram-sidebar" style="display: none; padding: 0 10px 0 10px">
         <h3 id="panel-caption">Drawing1</h3>
-        <div id="shape-code" class="panel panel-default">
+        <div id="shape-search" class="panel panel-default" style="display: none">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <svg class="icon-search">
+                        <symbol id="icon-search" viewBox="0 0 32 32">
+                            <path d="M28.232 6.232l-4.465-4.464c-0.972-0.972-2.893-1.768-4.268-1.768h-15c-1.375 0-2.5 1.125-2.5 2.5v27c0 1.375 1.125 2.5 2.5 2.5h23c1.375 0 2.5-1.125 2.5-2.5v-19c0-1.375-0.796-3.296-1.768-4.268zM26.818 7.646c0.098 0.098 0.195 0.218 0.29 0.354h-5.108v-5.108c0.136 0.095 0.256 0.192 0.354 0.29l4.465 4.464zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5h15c0.151 0 0.32 0.019 0.5 0.053v7.947h7.947c0.034 0.18 0.053 0.349 0.053 0.5v19z"></path>
+                        </symbol>
+                        <use xlink:href="#icon-search"></use>
+                    </svg>&nbsp;
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseSearch">Search</a>
+                </h4>
+            </div>
+            <div id="collapseSearch" class="panel-collapse collapse in">
+                <div id="panel-search" class="panel-body">
+                    <input type="text" id="search-term" class="form-control" value="" autocomplete="off" />
+                    <div id="panel-search-results"></div>
+                </div>
+            </div>
+        </div>
+                <div id="shape-code" class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <svg class="icon-sidebar">
@@ -86,12 +105,13 @@
         </svg>
     </div>
     <div id="svg" class="svg appear">
-        <svg width="100%" height="100%" xml:space="preserve" color-interpolation-filters="sRGB" class="st2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+        <svg width="100%" height="100%" xml:space="preserve" color-interpolation-filters="sRGB" class="st3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 	
 
 	<style type="text/css">
 	.st1 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75;}
-	.st2 {fill:none;fill-rule:evenodd;font-size:12px;overflow:hidden;stroke-linecap:square;stroke-miterlimit:3;}
+	.st2 {fill:#000000;font-family:Calibri;font-size:1.00001em;}
+	.st3 {fill:none;fill-rule:evenodd;font-size:12px;overflow:hidden;stroke-linecap:square;stroke-miterlimit:3;}
 </style>
 
 	<g id="viewport">
@@ -99,20 +119,32 @@
 		
 		<g id="shape1" transform="translate(28.3465,-680.315)">
 			
+			<desc>AAA</desc>
+			
+			
 			<rect x="0" y="771.024" width="155.906" height="70.8661" class="st1" />
-		</g>
+			<text x="67.54" y="810.06" class="st2">AAA</text>		</g>
 		<g id="shape2" transform="translate(170.079,-510.236)">
 			
+			<desc>BBB</desc>
+			
+			
 			<rect x="0" y="728.504" width="155.906" height="113.386" class="st1" />
-		</g>
+			<text x="68.16" y="788.8" class="st2">BBB</text>		</g>
 		<g id="shape3" transform="translate(70.8661,-283.465)">
 			
+			<desc>CCC</desc>
+			
+			
 			<rect x="0" y="728.504" width="170.079" height="113.386" class="st1" />
-		</g>
+			<text x="75.44" y="788.8" class="st2">CCC</text>		</g>
 		<g id="shape4" transform="translate(388.346,-280.63)">
 			
+			<desc>DDD</desc>
+			
+			
 			<rect x="0" y="751.181" width="141.732" height="90.7087" class="st1" />
-		</g>
+			<text x="59.79" y="800.14" class="st2">DDD</text>		</g>
 	</g>
 </svg>
     </div>
