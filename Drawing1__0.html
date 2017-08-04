@@ -11,37 +11,17 @@
 
 
 <link href="vp/vp-style-1.1.0.min.css" rel="stylesheet" />
+    <script>
+    window.svgpublish = {"shapes":{},"pages":[{"Name":"Page-1","Id":0}],"currentPage":{"Name":"Page-1","Id":0},"layers":[],"enableProps":true,"enableLinks":true,"enablePages":true,"enableSearch":false,"enableSidebar":true,"enableTooltips":true,"enableSelection":true,"enableLayers":false,"enableFollowHyperlinks":true,"openHyperlinksInNewWindow":true}
+    $(document).ready(function () { $("div.svg").panzoom({ svg: $("div.svg > svg").get(0), viewBox: "0 0 612 792" }).removeClass("appear"); });
+    </script>
 <script src="vp/vp-script-1.1.0.min.js"></script>
-<script>
-    window.svgpublish = {"shapes":{},"pages":[{"Name":"Page-1","Id":0}],"currentPage":{"Name":"Page-1","Id":0},"layers":[],"enableProps":true,"enableLinks":true,"enablePages":true,"enableSidebar":true,"enableTooltips":true,"enableSelection":true,"enableLayers":false}
-    $(document).ready(function () { $("div.svg").panzoom({ svg: $("div.svg > svg").get(0), viewBox: "0 0 595.276 841.89" }).removeClass("appear"); });
-</script>
 </head>
 <body>
 
-<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <defs>
-        <filter id="hover">
-            <feMorphology result="offset" in="SourceGraphic" operator="dilate" radius="5"></feMorphology>
-            <feColorMatrix result="drop" in="offset" type="matrix" values="1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0.3 0"></feColorMatrix>
-            <feBlend in="SourceGraphic" in2="drop" mode="normal"></feBlend>
-        </filter>
-
-        <filter id="select">
-            <feMorphology result="offset" in="SourceGraphic" operator="dilate" radius="5"></feMorphology>
-            <feColorMatrix result="drop" in="offset" type="matrix" values="1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0.9 0"></feColorMatrix>
-            <feBlend in="SourceGraphic" in2="drop" mode="normal"></feBlend>
-        </filter>
-
-        <filter id="hyperlink">
-            <feMorphology result="offset" in="SourceGraphic" operator="dilate" radius="5"></feMorphology>
-            <feColorMatrix result="drop" in="offset" type="matrix" values="0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 0 0 0 0.3 0"></feColorMatrix>
-            <feBlend in="SourceGraphic" in2="drop" mode="normal"></feBlend>
-        </filter>
-    </defs>
-</svg>
 <div id="diagram-sidebar" class="container" style="display: none">
         <h3 id="panel-caption">Drawing1</h3>
+
         <div id="shape-pages" class="panel panel-default" style="display: none">
             <div class="panel-heading">
                 <h4 class="panel-title">
@@ -109,19 +89,45 @@
     </svg>
 </div>
 <div id="svg" class="svg appear">
-    <svg width="100%" height="100%" xml:space="preserve" color-interpolation-filters="sRGB" class="st1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+    <svg width="100%" height="100%" xml:space="preserve" color-interpolation-filters="sRGB" class="st2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 	
 
 	<style type="text/css">
-	.st1 {fill:none;fill-rule:evenodd;font-size:12px;overflow:hidden;stroke-linecap:square;stroke-miterlimit:3;}
+	.st1 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75;}
+	.st2 {fill:none;fill-rule:evenodd;font-size:12px;overflow:hidden;stroke-linecap:square;stroke-miterlimit:3;}
 </style>
 
 	<g id="viewport">
 		
 		
+		<g id="shape1" transform="translate(72,-540)">
+			
+			<rect x="0" y="612" width="72" height="180" class="st1" />
+		</g>
 	</g>
 </svg>
 </div>
+
+<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <filter id="hover">
+            <feMorphology result="offset" in="SourceGraphic" operator="dilate" radius="5"></feMorphology>
+            <feColorMatrix result="drop" in="offset" type="matrix" values="1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0.3 0"></feColorMatrix>
+            <feBlend in="SourceGraphic" in2="drop" mode="normal"></feBlend>
+        </filter>
+
+        <filter id="select">
+            <feMorphology result="offset" in="SourceGraphic" operator="dilate" radius="5"></feMorphology>
+            <feColorMatrix result="drop" in="offset" type="matrix" values="1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0.9 0"></feColorMatrix>
+            <feBlend in="SourceGraphic" in2="drop" mode="normal"></feBlend>
+        </filter>
+        <filter id="hyperlink">
+            <feMorphology result="offset" in="SourceGraphic" operator="dilate" radius="5"></feMorphology>
+            <feColorMatrix result="drop" in="offset" type="matrix" values="0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 0 0 0 0.3 0"></feColorMatrix>
+            <feBlend in="SourceGraphic" in2="drop" mode="normal"></feBlend>
+        </filter>
+    </defs>
+</svg>
 
 <script type="text/javascript">
     (function (diagram) {  })(window.svgpublish);
