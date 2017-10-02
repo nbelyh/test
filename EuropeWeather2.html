@@ -429,7 +429,7 @@ $.each(diagram.shapes, function (shapeid, shape) {
                 $span.css({ top: e.pageY, left: e.pageX })
                 timeout = setTimeout(function() {
                     $span.tooltip('show');
-                }, 250);
+                }, 100);
             });
 
             $shape.on('mouseleave', function () {
