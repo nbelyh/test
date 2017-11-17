@@ -1,0 +1,568 @@
+﻿<!DOCTYPE html>
+<html class="vp">
+<head>
+    <title>Drawing3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="vp/jquery-3.1.1.min.js"></script>
+    <link href="vp/bootstrap-3.3.7.min.css" rel="stylesheet" />
+    <script src="vp/bootstrap-3.3.7.min.js"></script>
+    
+    
+    <link href="vp/vp-style-1.2.3.min.css" rel="stylesheet" />
+    <script>
+        window.svgpublish = {"shapes":{"shape49":{"Layers":[],"Text":""},"shape1":{"Layers":[],"Text":"Double-click or right-click the bingo board to generate new numbers. \nThis message will not print."},"shape3":{"Layers":[],"Text":""},"shape4":{"DefaultLink":1,"Links":[{"PageId":-1,"SubAddress":"","Address":"http://www.visguy.com","Description":"Visio Guy"}],"Layers":[],"Text":""}},"pages":[{"Name":"Page-1","Id":0,"FileName":"Drawing3.html"}],"currentPage":{"Name":"Page-1","Id":0,"FileName":"Drawing3.html"},"layers":[{"Name":"Connector","Index":1}],"enableProps":true,"twoFingersTouch":false,"enableLinks":true,"enablePages":true,"enablePageLookup":false,"enableZoomCtrl":false,"enableZoomShift":false,"enableSearch":false,"enableMultiPageSearch":false,"enableCode":false,"enableSidebar":true,"enableTooltips":true,"enableSelection":true,"enableLayers":false,"enableFollowHyperlinks":true,"openHyperlinksInNewWindow":true,"rightSidebar":false,"enableSidbarTitle":false,"enableSidebarHtml":false,"enableTooltipHtml":false,"enableD3":false,"enablePopovers":false,"enablePopoverHtml":false}
+        $(document).ready(function () { $("div.svg").panzoom({ svg: $("div.svg > svg").get(0), viewBox: "0 0 612 792" }).removeClass("appear"); });
+    </script>
+    <script src="vp/vp-script-1.2.3.min.js"></script>
+    
+</head>
+<body>
+    
+    
+    
+    
+    
+    <div id="diagram-sidebar" style="display: none; position: absolute">
+    <div style="height: 100%; width: 100%; padding: 1em">
+        
+        
+
+        <div id="shape-pages" class="panel panel-default" style="display: none">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <svg class="icon-sidebar">
+                        <symbol id="icon-page" viewBox="0 0 32 32">
+                            <path d="M28.232 6.232l-4.465-4.464c-0.972-0.972-2.893-1.768-4.268-1.768h-15c-1.375 0-2.5 1.125-2.5 2.5v27c0 1.375 1.125 2.5 2.5 2.5h23c1.375 0 2.5-1.125 2.5-2.5v-19c0-1.375-0.796-3.296-1.768-4.268zM26.818 7.646c0.098 0.098 0.195 0.218 0.29 0.354h-5.108v-5.108c0.136 0.095 0.256 0.192 0.354 0.29l4.465 4.464zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5h15c0.151 0 0.32 0.019 0.5 0.053v7.947h7.947c0.034 0.18 0.053 0.349 0.053 0.5v19z"></path>
+                        </symbol>
+                        <use xlink:href="#icon-page"></use>
+                    </svg>&nbsp;
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapsePages">Pages</a>
+                </h4>
+            </div>
+            <div id="collapsePages" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    
+                    <div id="panel-pages"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="shape-links" class="panel panel-default" style="display: none">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <svg class="icon-sidebar">
+                        <symbol id="icon-chain" viewBox="0 0 26 28">
+                            <path d="M22.75 19c0-0.406-0.156-0.781-0.438-1.062l-3.25-3.25c-0.281-0.281-0.672-0.438-1.062-0.438-0.453 0-0.812 0.172-1.125 0.5 0.516 0.516 1.125 0.953 1.125 1.75 0 0.828-0.672 1.5-1.5 1.5-0.797 0-1.234-0.609-1.75-1.125-0.328 0.313-0.516 0.672-0.516 1.141 0 0.391 0.156 0.781 0.438 1.062l3.219 3.234c0.281 0.281 0.672 0.422 1.062 0.422s0.781-0.141 1.062-0.406l2.297-2.281c0.281-0.281 0.438-0.656 0.438-1.047zM11.766 7.984c0-0.391-0.156-0.781-0.438-1.062l-3.219-3.234c-0.281-0.281-0.672-0.438-1.062-0.438s-0.781 0.156-1.062 0.422l-2.297 2.281c-0.281 0.281-0.438 0.656-0.438 1.047 0 0.406 0.156 0.781 0.438 1.062l3.25 3.25c0.281 0.281 0.672 0.422 1.062 0.422 0.453 0 0.812-0.156 1.125-0.484-0.516-0.516-1.125-0.953-1.125-1.75 0-0.828 0.672-1.5 1.5-1.5 0.797 0 1.234 0.609 1.75 1.125 0.328-0.313 0.516-0.672 0.516-1.141zM25.75 19c0 1.188-0.484 2.344-1.328 3.172l-2.297 2.281c-0.844 0.844-1.984 1.297-3.172 1.297-1.203 0-2.344-0.469-3.187-1.328l-3.219-3.234c-0.844-0.844-1.297-1.984-1.297-3.172 0-1.234 0.5-2.406 1.375-3.266l-1.375-1.375c-0.859 0.875-2.016 1.375-3.25 1.375-1.188 0-2.344-0.469-3.187-1.313l-3.25-3.25c-0.859-0.859-1.313-1.984-1.313-3.187 0-1.188 0.484-2.344 1.328-3.172l2.297-2.281c0.844-0.844 1.984-1.297 3.172-1.297 1.203 0 2.344 0.469 3.187 1.328l3.219 3.234c0.844 0.844 1.297 1.984 1.297 3.172 0 1.234-0.5 2.406-1.375 3.266l1.375 1.375c0.859-0.875 2.016-1.375 3.25-1.375 1.188 0 2.344 0.469 3.187 1.313l3.25 3.25c0.859 0.859 1.313 1.984 1.313 3.187z"></path>
+                        </symbol>
+                        <use xlink:href="#icon-chain"></use>
+                    </svg>&nbsp;
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseLinks">Shape Links</a>
+                </h4>
+            </div>
+            <div id="collapseLinks" class="panel-collapse collapse in">
+                <div id="panel-links" class="panel-body">
+                </div>
+            </div>
+        </div>
+        
+        <div id="shape-props" class="panel panel-default" style="display: none">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <svg class="icon-sidebar">
+                        <symbol id="icon-list-ul" viewBox="0 0 28 28">
+                            <path d="M6 22c0 1.656-1.344 3-3 3s-3-1.344-3-3 1.344-3 3-3 3 1.344 3 3zM6 14c0 1.656-1.344 3-3 3s-3-1.344-3-3 1.344-3 3-3 3 1.344 3 3zM28 20.5v3c0 0.266-0.234 0.5-0.5 0.5h-19c-0.266 0-0.5-0.234-0.5-0.5v-3c0-0.266 0.234-0.5 0.5-0.5h19c0.266 0 0.5 0.234 0.5 0.5zM6 6c0 1.656-1.344 3-3 3s-3-1.344-3-3 1.344-3 3-3 3 1.344 3 3zM28 12.5v3c0 0.266-0.234 0.5-0.5 0.5h-19c-0.266 0-0.5-0.234-0.5-0.5v-3c0-0.266 0.234-0.5 0.5-0.5h19c0.266 0 0.5 0.234 0.5 0.5zM28 4.5v3c0 0.266-0.234 0.5-0.5 0.5h-19c-0.266 0-0.5-0.234-0.5-0.5v-3c0-0.266 0.234-0.5 0.5-0.5h19c0.266 0 0.5 0.234 0.5 0.5z"></path>
+                        </symbol>
+                        <use xlink:href="#icon-list-ul"></use>
+                    </svg>&nbsp;
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseProps">Shape Properties</a>
+                </h4>
+            </div>
+            <div id="collapseProps" class="panel-collapse collapse in">
+                <div id="panel-props" class="panel-body">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="sidebar-toggle" style="display: none">
+        <svg class="icon-sidebar">
+            <symbol id="icon-bars" viewBox="0 0 24 28">
+                <path d="M24 21v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 13v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 5v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1z"></path>
+            </symbol>
+            <use xlink:href="#icon-bars"></use>
+        </svg>
+    </div>
+    <div id="svg" class="svg appear">
+        <svg width="100%" height="100%" xml:space="preserve" color-interpolation-filters="sRGB" class="st24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	
+
+	<style type="text/css">
+	.st1 {fill:#ffffff;stroke:#002060;stroke-linecap:round;stroke-linejoin:round;stroke-width:3.12;}
+	.st2 {fill:#c8d6e6;stroke:#9dbb61;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72;}
+	.st3 {fill:#ffffff;stroke:#002060;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72;}
+	.st4 {fill:#000000;font-family:Arial;font-size:3.99749em;}
+	.st5 {fill:#000000;font-family:Arial;font-size:1.84499em;}
+	.st6 {fill:#ffffff;stroke:#1f477d;stroke-linecap:round;stroke-linejoin:round;stroke-width:4.08;}
+	.st7 {fill:#c05046;font-family:Arial Black;font-size:5.2275em;}
+	.st8 {fill:none;stroke:#0000ff;stroke-dasharray:0.75,1.5;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75;}
+	.st9 {fill:#0000ff;font-family:Arial;font-size:0.75em;}
+	.st10 {font-size:1em;}
+	.st11 {fill:#ffffff;stroke:#008080;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.2;}
+	.st12 {marker-end:url(#mrkr13-123);stroke:#969696;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24;}
+	.st13 {fill:#969696;fill-opacity:1;stroke:#969696;stroke-opacity:1;stroke-width:0.14285714285714;}
+	.st14 {fill:url(#grad3-128);stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72;}
+	.st15 {fill:url(#grad3-132);stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72;}
+	.st16 {fill:#000000;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24;}
+	.st17 {fill:#000000;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72;}
+	.st18 {fill:url(#grad3-141);stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72;}
+	.st19 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72;}
+	.st20 {fill:#008080;font-family:Cooper Black;font-size:1.5em;opacity:0.196078;}
+	.st21 {fill:#008080;font-family:Cooper Black;font-size:1.5em;}
+	.st22 {fill:#008080;font-family:Cooper Black;font-size:0.833336em;opacity:0.196078;}
+	.st23 {fill:#008080;font-family:Cooper Black;font-size:0.833336em;}
+	.st24 {fill:none;fill-rule:evenodd;font-size:12px;overflow:hidden;stroke-linecap:square;stroke-miterlimit:3;}
+</style>
+
+	<defs id="Patterns_And_Gradients">
+		<radialGradient id="grad3-128" cx="0.5" cy="0.5" r="0.73">
+			<stop offset="0" stop-color="#808000" stop-opacity="1" />
+			<stop offset="1" stop-color="#808000" stop-opacity="0" />
+		</radialGradient>
+		<radialGradient id="grad3-132" cx="0.5" cy="0.5" r="0.73">
+			<stop offset="0" stop-color="#ffff00" stop-opacity="1" />
+			<stop offset="1" stop-color="#ff9900" stop-opacity="1" />
+		</radialGradient>
+		<radialGradient id="grad3-141" cx="0.5" cy="0.5" r="0.73">
+			<stop offset="0" stop-color="#ffffff" stop-opacity="1" />
+			<stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+		</radialGradient>
+	</defs>
+	<defs id="Markers">
+		<g id="lend13">
+			<path d="M 3 1 L 0 0 L 3 -1 L 3 1 " style="stroke:none" />
+		</g>
+		<marker style="overflow:visible" id="mrkr13-123" class="st13" refX="-21" orient="auto" markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend13" transform="scale(-7,-7) " />
+		</marker>
+	</defs>
+	<g id="viewport">
+		
+		
+		
+		
+		<g id="shape49" transform="translate(72,-72)">
+			
+			
+			<g id="shape2-2">
+				
+				<rect x="0" y="259.2" width="468" height="532.8" class="st1" />
+			</g>
+			<g id="group47-4">
+				
+				
+				<g id="shape12-5" transform="translate(9,-9)">
+					
+					<rect x="0" y="373.5" width="82.8" height="418.5" class="st2" />
+				</g>
+				<g id="shape48-7" transform="translate(9,-344.7)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="28.06" y="767.39" class="st4">3</text>				</g>
+				<g id="shape50-10" transform="translate(9,-261.9)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="14.72" y="767.39" class="st4">15</text>				</g>
+				<g id="shape51-13" transform="translate(9,-179.1)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="28.06" y="767.39" class="st4">9</text>				</g>
+				<g id="shape52-16" transform="translate(9,-96.3)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="14.72" y="767.39" class="st4">11</text>				</g>
+				<g id="shape53-19" transform="translate(9,-13.5)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="28.06" y="767.39" class="st4">5</text>				</g>
+			</g>
+			<g id="group13-22" transform="translate(91.8,0)">
+				
+				
+				<g id="shape14-23" transform="translate(9,-9)">
+					
+					<rect x="0" y="373.5" width="82.8" height="418.5" class="st2" />
+				</g>
+				<g id="shape15-25" transform="translate(9,-344.7)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="14.72" y="767.39" class="st4">26</text>				</g>
+				<g id="shape16-28" transform="translate(9,-261.9)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="14.72" y="767.39" class="st4">28</text>				</g>
+				<g id="shape17-31" transform="translate(9,-179.1)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="14.72" y="767.39" class="st4">29</text>				</g>
+				<g id="shape18-34" transform="translate(9,-96.3)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="14.72" y="767.39" class="st4">30</text>				</g>
+				<g id="shape19-37" transform="translate(9,-13.5)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="14.72" y="767.39" class="st4">25</text>				</g>
+			</g>
+			<g id="group20-40" transform="translate(183.6,0)">
+				
+				
+				<g id="shape21-41" transform="translate(9,-9)">
+					
+					<rect x="0" y="373.5" width="82.8" height="418.5" class="st2" />
+				</g>
+				<g id="shape22-43" transform="translate(9,-344.7)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="14.72" y="767.39" class="st4">34</text>				</g>
+				<g id="shape23-46" transform="translate(9,-261.9)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="14.72" y="767.39" class="st4">32</text>				</g>
+				<g id="shape24-49" transform="translate(9,-179.1)">
+					
+					<desc>FREE</desc>
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="11.88" y="758.35" class="st5">FREE</text>				</g>
+				<g id="shape25-52" transform="translate(9,-96.3)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="14.72" y="767.39" class="st4">44</text>				</g>
+				<g id="shape26-55" transform="translate(9,-13.5)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="14.72" y="767.39" class="st4">35</text>				</g>
+			</g>
+			<g id="group27-58" transform="translate(275.4,0)">
+				
+				
+				<g id="shape28-59" transform="translate(9,-9)">
+					
+					<rect x="0" y="373.5" width="82.8" height="418.5" class="st2" />
+				</g>
+				<g id="shape29-61" transform="translate(9,-344.7)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="14.72" y="767.39" class="st4">59</text>				</g>
+				<g id="shape30-64" transform="translate(9,-261.9)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="14.72" y="767.39" class="st4">51</text>				</g>
+				<g id="shape31-67" transform="translate(9,-179.1)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="14.72" y="767.39" class="st4">60</text>				</g>
+				<g id="shape32-70" transform="translate(9,-96.3)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="14.72" y="767.39" class="st4">50</text>				</g>
+				<g id="shape33-73" transform="translate(9,-13.5)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="14.72" y="767.39" class="st4">49</text>				</g>
+			</g>
+			<g id="group34-76" transform="translate(367.2,0)">
+				
+				
+				<g id="shape35-77" transform="translate(9,-9)">
+					
+					<rect x="0" y="373.5" width="82.8" height="418.5" class="st2" />
+				</g>
+				<g id="shape36-79" transform="translate(9,-344.7)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="14.72" y="767.39" class="st4">71</text>				</g>
+				<g id="shape37-82" transform="translate(9,-261.9)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="14.72" y="767.39" class="st4">74</text>				</g>
+				<g id="shape38-85" transform="translate(9,-179.1)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="14.72" y="767.39" class="st4">65</text>				</g>
+				<g id="shape39-88" transform="translate(9,-96.3)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="14.72" y="767.39" class="st4">67</text>				</g>
+				<g id="shape40-91" transform="translate(9,-13.5)">
+					
+					
+					
+					
+					<rect x="4.5" y="713.7" width="73.8" height="78.3" class="st3" />
+					<text x="14.72" y="767.39" class="st4">70</text>				</g>
+			</g>
+			<g id="shape41-94" transform="translate(9,-441)">
+				
+				<desc>B</desc>
+				
+				
+				
+				<ellipse cx="41.4" cy="750.6" rx="41.4" ry="41.4" class="st6" />
+				<text x="17" y="772.56" class="st7">B</text>			</g>
+			<g id="shape42-97" transform="translate(100.8,-441)">
+				
+				<desc>I</desc>
+				
+				
+				
+				<ellipse cx="41.4" cy="750.6" rx="41.4" ry="41.4" class="st6" />
+				<text x="29.19" y="772.56" class="st7">I</text>			</g>
+			<g id="shape43-100" transform="translate(192.6,-441)">
+				
+				<desc>N</desc>
+				
+				
+				
+				<ellipse cx="41.4" cy="750.6" rx="41.4" ry="41.4" class="st6" />
+				<text x="15.27" y="772.56" class="st7">N</text>			</g>
+			<g id="shape44-103" transform="translate(284.4,-441)">
+				
+				<desc>G</desc>
+				
+				
+				
+				<ellipse cx="41.4" cy="750.6" rx="41.4" ry="41.4" class="st6" />
+				<text x="15.27" y="772.56" class="st7">G</text>			</g>
+			<g id="shape45-106" transform="translate(376.2,-441)">
+				
+				<desc>O</desc>
+				
+				
+				
+				<ellipse cx="41.4" cy="750.6" rx="41.4" ry="41.4" class="st6" />
+				<text x="15.27" y="772.56" class="st7">O</text>			</g>
+		</g>
+		<g id="shape1" transform="translate(18,-18)">
+			
+			<desc>Double-click or right-click the bingo board to generate new n...</desc>
+			
+			
+			
+			<path d="M0 792 L576 792 L576 756 L0 756 L0 792 Z" class="st8" />
+			<text x="4" y="768.1" class="st9">Double-click or right-click the bingo board to generate new numbers. <tspan x="4" dy="1.2em" class="st10">This message will not print.</tspan></text>		</g>
+		<g id="shape3" transform="translate(36,-693)">
+			
+			
+			
+			
+			<rect x="0" y="729" width="522" height="63" rx="9" ry="9" class="st11" />
+		</g>
+		
+			<g id="shape4" transform="translate(18,-702)">
+				
+				
+				<g id="shape5-116">
+					
+					<rect x="0" y="720" width="180" height="72" rx="9" ry="9" class="st11" />
+				</g>
+				<g id="shape6-118" transform="translate(36,-36)">
+					
+					<path d="M0 792 L30.37 792 L30.37 774 L112.5 774 L112.5 780.21" class="st12" />
+				</g>
+				<g id="group7-124">
+					
+					<g id="shape8-125">
+						
+						<ellipse cx="36" cy="756" rx="36" ry="36" class="st14" />
+					</g>
+					<g id="shape9-129" transform="translate(8.43802,-16.54)">
+						
+						<ellipse cx="24.2027" cy="767.797" rx="24.2027" ry="24.2027" class="st15" />
+					</g>
+					<g id="shape10-133" transform="translate(-62.1767,-18.6454) rotate(-6.9)">
+						
+						<path d="M8.21 788.63 L8.21 788.63 A6.08399 4.99789 0 0 1 0 788.62 A4.10449 3.37177 -180 1 0 8.21 788.63 Z" class="st16" />
+					</g>
+					<g id="group11-135" transform="translate(38.3131,-35.0136)">
+						
+						<g id="shape46-136" transform="translate(-19.2112,0.303889) rotate(-1.4)">
+							
+							<path d="M5.46 787.88 A2.77846 5.55692 -180 1 0 4.81 790.24 L2.78 789.22 L5.46 787.88 Z" class="st17" />
+						</g>
+						<g id="shape54-138" transform="translate(-68.2962,-3.06956) rotate(-5)">
+							
+							<ellipse cx="1.2335" cy="790.056" rx="1.2335" ry="1.9437" class="st18" />
+						</g>
+					</g>
+					<g id="shape55-142" transform="translate(159.538,-36.6912) rotate(10)">
+						
+						<path d="M1.25 791.91 A31.6757 19.6621 80.99 0 1 9.77 790.94 L9.7 790.43 A1.54784 1.29217 -0 0 0 8.67 789.35           A31.6757 19.6621 -99.01 0 0 0.96 789.48 A1.54784 1.29217 -0 0 0 0.01 790.82 L0.09 791.43 a0.773922           0.646086 -0 0 0 1.16504 0.483827 Z" class="st16" />
+					</g>
+					<g id="shape56-144" transform="translate(-167.887,-19.4984) rotate(-15)">
+						
+						<path d="M7.09 791.89 a0.773922 0.572667 -180 0 0 1.21989 -0.368179 L8.42 791.01 A1.54784 1.14533 -180 0           0 7.6 789.8 A28.3747 16.7284 -74.24 0 0 1.13 789.54 A1.54784 1.14533 -180 0 0 0.11 790.43 L0           790.92 A28.3747 16.7284 105.76 0 1 7.09 791.89 Z" class="st16" />
+					</g>
+					<g id="group57-146" transform="translate(26.3787,-33.866)">
+						
+						<g id="shape58-147" transform="translate(-118.832,9.51706) rotate(-8.7)">
+							
+							<path d="M5.46 787.88 A2.77846 5.55692 -180 1 0 4.81 790.24 L2.78 789.22 L5.46 787.88 Z" class="st17" />
+						</g>
+						<g id="shape59-149" transform="translate(-68.6608,-2.98755) rotate(-5)">
+							
+							<ellipse cx="1.2335" cy="790.056" rx="1.2335" ry="1.9437" class="st18" />
+						</g>
+					</g>
+				</g>
+				<g id="group60-152" transform="translate(65.25,-14.7857)">
+					
+					<g id="shape61-153" transform="translate(1.125,0)">
+						
+						<desc>Visio Guy</desc>
+						
+						
+						<rect x="0" y="748.125" width="105.75" height="43.875" class="st19" />
+						<text x="8.46" y="775.46" class="st20">Visio Guy</text>					</g>
+					<g id="shape62-156" transform="translate(0.5625,-0.5625)">
+						
+						<desc>Visio Guy</desc>
+						
+						
+						<rect x="0" y="748.125" width="105.75" height="43.875" class="st19" />
+						<text x="8.46" y="775.46" class="st20">Visio Guy</text>					</g>
+					<g id="shape63-159" transform="translate(7.99361E-15,-1.125)">
+						
+						<desc>Visio Guy</desc>
+						
+						
+						<rect x="0" y="748.125" width="105.75" height="43.875" class="st19" />
+						<text x="8.46" y="775.46" class="st21">Visio Guy</text>					</g>
+				</g>
+				<g id="group64-162">
+					
+					<g id="shape65-163" transform="translate(1.89474,0)">
+						
+						<desc>WWW.VISGUY.COM</desc>
+						
+						
+						<rect x="0" y="778.837" width="178.105" height="13.1625" class="st19" />
+						<text x="37.28" y="788.42" class="st22">WWW.VISGUY.COM</text>					</g>
+					<g id="shape66-166" transform="translate(0.947368,-0.16875)">
+						
+						<desc>WWW.VISGUY.COM</desc>
+						
+						
+						<rect x="0" y="778.837" width="178.105" height="13.1625" class="st19" />
+						<text x="37.28" y="788.42" class="st22">WWW.VISGUY.COM</text>					</g>
+					<g id="shape67-169" transform="translate(0,-0.3375)">
+						
+						<desc>WWW.VISGUY.COM</desc>
+						
+						
+						<rect x="0" y="778.837" width="178.105" height="13.1625" class="st19" />
+						<text x="37.28" y="788.42" class="st23">WWW.VISGUY.COM</text>					</g>
+				</g>
+			</g>
+		
+	</g>
+</svg>
+    </div>
+
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <filter id="hover">
+                <feMorphology result="offset" in="SourceGraphic" operator="dilate" radius="5"></feMorphology>
+                <feColorMatrix result="drop" in="offset" type="matrix" values="1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0.3 0"></feColorMatrix>
+                <feBlend in="SourceGraphic" in2="drop" mode="normal"></feBlend>
+            </filter>
+
+            <filter id="select">
+                <feMorphology result="offset" in="SourceGraphic" operator="dilate" radius="5"></feMorphology>
+                <feColorMatrix result="drop" in="offset" type="matrix" values="1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0.9 0"></feColorMatrix>
+                <feBlend in="SourceGraphic" in2="drop" mode="normal"></feBlend>
+            </filter>
+            <filter id="hyperlink">
+                <feMorphology result="offset" in="SourceGraphic" operator="dilate" radius="5"></feMorphology>
+                <feColorMatrix result="drop" in="offset" type="matrix" values="0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 0 0 0 0.3 0"></feColorMatrix>
+                <feBlend in="SourceGraphic" in2="drop" mode="normal"></feBlend>
+            </filter>
+        </defs>
+    </svg>
+    
+</body>
+</html>
