@@ -1,0 +1,23 @@
+﻿html.vp, .vp body, .vp .svg {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.vp .svg {
+    overflow: hidden;
+}
+
+div.svg {
+    transition: opacity .7s ease-in;
+}
+
+div.svg.appear {
+    opacity: 0;
+}
+
+#diagram {
+    height: 100%;
+    padding: 5px;
+}
