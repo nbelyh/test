@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html class="vp">
+<head>
+  <meta charset="utf-8">
+  <title>Drawing4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta property="og:title" content="Drawing4" />
+
+  <script src="vp/jquery-3.1.1.min.js"></script>
+  <link href="vp/bootstrap-3.3.7.min.css" rel="stylesheet" />
+  <script src="vp/bootstrap-3.3.7.min.js"></script>
+  
+  
+  <script src="vp/mustache-2.3.0.min.js"></script>
+  <script src="vp/marked-1.0.0.min.js"></script>
+  <link href="vp/vp-style-1.4.0.min.css" rel="stylesheet" />
+  <script>
+        window.svgpublish = {"shapes":{"shape21":{"ShapeId":"shape21","Layers":[1],"Text":"","MasterName":"Dynamic connector"},"lamp":{"ShapeId":"lamp","Props":{"Label":"L1"},"ConnectedTo":["shape18","shape29"],"Text":"L1","MasterName":"Relay coil"},"shape27":{"ShapeId":"shape27","Layers":[1],"Text":"","MasterName":"Dynamic connector"},"shape28":{"ShapeId":"shape28","Layers":[1],"Text":"","MasterName":"Dynamic connector"},"shape29":{"ShapeId":"shape29","Props":{"Label":"X2"},"ConnectedFrom":["lamp"],"Layers":[2],"Text":"X2","MasterName":"SPST"},"shape32":{"ShapeId":"shape32","Layers":[1],"Text":"","MasterName":"Dynamic connector"},"shape18":{"ShapeId":"shape18","Props":{"Label":"X1"},"ConnectedFrom":["lamp"],"Layers":[2],"Text":"X1","MasterName":"SPST"},"shape36":{"ShapeId":"shape36","Props":{"Label":"X1"},"Layers":[2],"Text":"X1","MasterName":"SPST"},"shape39":{"ShapeId":"shape39","Props":{"Label":"X2"},"Layers":[2],"Text":"X2","MasterName":"SPST"}},"pages":[{"Name":"Page-1","Id":0,"FileName":"relay-circuit.html"}],"currentPage":{"Name":"Page-1","Id":0,"FileName":"relay-circuit.html"},"layers":[{"Name":"Connector","Index":1,"Visible":true},{"Name":"Electrical","Index":2,"Visible":true}],"enableProps":true,"twoFingersTouch":false,"enableAutoFrameHeight":false,"enableLinks":true,"enablePages":true,"enablePageLookup":false,"enablePageSort":false,"enableZoomCtrl":false,"enableZoomShift":false,"enableSearch":false,"enableMultiPageSearch":false,"enableSidebar":false,"enableTooltips":false,"enableSelection":false,"enableHover":false,"enableLayers":false,"enableFollowHyperlinks":false,"openHyperlinksInNewWindow":false,"transformVisioFileLinks":false,"useReadablePageNames":false,"keepRelativeLinks":false,"rightSidebar":false,"alwaysHideSidebar":false,"showSidebarOnSelection":false,"enableSidbarTitle":false,"enableSidebarMarkdown":false,"enableTooltipMarkdown":false,"enableD3":false,"skipMinification":false,"enableBootstrapSwitch":false,"enableBootstrapSelect":false,"tooltipPlacement":"","popoverPlacement":"","enablePopovers":false,"enablePopoverMarkdown":false,"enableContentMarkdown":false,"tooltipTrigger":"","tooltipOutsideClick":false,"tooltipUseMousePosition":false,"tooltipKeepOnHover":false,"tooltipTimeout":false,"tooltipTimeoutShow":"","sidebarDefaultWidth":"","tooltipTimeoutHide":"","popoverTrigger":"","popoverTimeout":false,"popoverOutsideClick":false,"popoverKeepOnHover":false,"popoverTimeoutShow":"","popoverTimeoutHide":"","popoverUseMousePosition":false,"enableContainerTip":false,"enablePropertySearch":false,"enablePropertySearchFilter":false,"processNested":false,"processBackground":false,"viewBox":"0 0 595.276 841.89","layerView":{"enableLayerLookup":false,"enableLayerSort":false,"enableLayerToggles":false,"enableLayerShowAll":false},"selectionView":{"enableBoxSelection":false,"enableBlur":false,"blur":2,"enableDilate":true,"dilate":4,"mode":"normal","selectColor":"rgba(255, 255, 0, 0.90)","hoverColor":"rgba(255, 255, 0, 0.30)","hyperlinkColor":"rgba(0, 0, 255, 0.30)"}}
+        $(document).ready(function () { $("div.svg").panzoom({ svg: $("div.svg > svg").get(0), viewBox: "0 0 595.276 841.89" }).removeClass("appear"); });
+  </script>
+  <script src="vp/vp-script-1.4.0.min.js"></script>
+  <style>
+  #lamp {
+    cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+  
+  <div id="body-html"></div>
+  <div id="svg" class="svg appear">
+    <svg width="100%" height="100%" xml:space="preserve" color-interpolation-filters="sRGB" class="st7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	
+
+	<style type="text/css">
+	.st1 {stroke:#000000;stroke-linecap:butt;stroke-width:0.75;}
+	.st2 {stroke:#000000;stroke-linecap:butt;stroke-width:2.94803;}
+	.st3 {stroke:#000000;stroke-linecap:butt;stroke-width:1.47402;}
+	.st4 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24;}
+	.st5 {fill:#000000;font-family:Calibri;font-size:0.833336em;}
+	.st6 {stroke:#000000;stroke-linecap:butt;stroke-width:2.21102;}
+	.st7 {fill:none;fill-rule:evenodd;font-size:12px;overflow:hidden;stroke-linecap:square;stroke-miterlimit:3;}
+</style>
+
+	<g id="viewport">
+		
+		
+		
+		
+		
+		
+		
+		<g id="shape21" transform="translate(123.477,-722.835)" class="dynamic-connector">
+			
+			<path d="M0 841.89 L-66.78 841.89 L-66.78 803.62" class="st1" />
+		</g>
+		<g id="lamp" transform="translate(198.425,-704.409)" class="relay-coil">
+			
+			
+			
+			<g id="shape25-5" transform="translate(6.40877,-6.40876)">
+				
+				<path d="M0 829.87 A12.0164 12.0164 0 0 1 24.03 829.87 A12.0164 12.0164 0 1 1 -0 829.87" class="st2" />
+			</g>
+			<g id="shape26-8" transform="translate(-1.83853E-13,-18.5086)">
+				
+				<path d="M36.85 841.89 L30.63 841.89" class="st3" />
+				<path d="M6.22 841.89 L0 841.89" class="st3" />
+			</g>
+			<g id="group34-12" transform="translate(6.40877,-6.40876)">
+				
+			</g>
+			<g id="shape35-13" transform="translate(7.93701,-7.75798)">
+				
+				<ellipse cx="10.5777" cy="831.312" rx="10.5777" ry="10.5777" class="st4" />
+			</g>
+			<g id="shape24-15">
+				
+				
+				<text x="13.79" y="851.89" class="st5">L1</text>			</g>
+		</g>
+		<g id="shape27" transform="translate(198.425,-715.748)" class="dynamic-connector">
+			
+			<path d="M0 834.8 L-46.94 834.8" class="st1" />
+		</g>
+		<g id="shape28" transform="translate(235.276,-715.748)" class="dynamic-connector">
+			
+			<path d="M0 834.8 L48.19 834.8" class="st1" />
+		</g>
+		<g id="shape29" transform="translate(279.043,-704.409)" class="spst_off">
+			
+			
+			
+			<desc>X2</desc>
+			<g id="shape30-24" transform="translate(8.84409,-18.4694)">
+				
+				<path d="M19.16 829.14 L0 841.89" class="st3" />
+			</g>
+			<g id="shape31-27" transform="translate(1.12458E-05,-14.0488)">
+				
+				<path d="M36.85 837.47 A4.42205 4.42205 0 1 1 28.01 837.47 A4.42205 4.42205 0 1 1 36.85 837.47" class="st6" />
+				<path d="M8.84 837.47 A4.42205 4.42205 0 1 1 -0 837.47 A4.42205 4.42205 0 1 1 8.84 837.47" class="st6" />
+			</g>
+			<g id="shape29-31">
+				
+				
+				<text x="13.3" y="838.99" class="st5">X2</text>			</g>
+		</g>
+		<g id="shape32" transform="translate(311.471,-722.835)" class="dynamic-connector">
+			
+			<path d="M0 841.89 L51.36 841.89 L51.36 880.16" class="st1" />
+		</g>
+		<g id="shape18" transform="translate(119.055,-704.409)" class="spst_off">
+			
+			
+			
+			<desc>X1</desc>
+			<g id="shape19-37" transform="translate(8.84409,-18.4694)">
+				
+				<path d="M19.16 829.14 L0 841.89" class="st3" />
+			</g>
+			<g id="shape20-40" transform="translate(1.12458E-05,-14.0488)">
+				
+				<path d="M36.85 837.47 A4.42205 4.42205 0 1 1 28.01 837.47 A4.42205 4.42205 0 1 1 36.85 837.47" class="st6" />
+				<path d="M8.84 837.47 A4.42205 4.42205 0 1 1 -0 837.47 A4.42205 4.42205 0 1 1 8.84 837.47" class="st6" />
+			</g>
+			<g id="shape18-44">
+				
+				
+				<text x="13.3" y="838.99" class="st5">X1</text>			</g>
+		</g>
+		<g id="shape36" transform="translate(119.055,-704.409)" class="spst_on">
+			
+			
+			
+			<desc>X1</desc>
+			<g id="shape37-47" transform="translate(8.84409,-18.4694)">
+				
+				<path d="M0 841.89 L19.16 841.89" class="st3" />
+			</g>
+			<g id="shape38-50" transform="translate(1.12458E-05,-14.0488)">
+				
+				<path d="M36.85 837.47 A4.42205 4.42205 0 1 1 28.01 837.47 A4.42205 4.42205 0 1 1 36.85 837.47" class="st6" />
+				<path d="M8.84 837.47 A4.42205 4.42205 0 1 1 -0 837.47 A4.42205 4.42205 0 1 1 8.84 837.47" class="st6" />
+			</g>
+			<g id="shape36-54">
+				
+				
+				<text x="13.3" y="838.99" class="st5">X1</text>			</g>
+		</g>
+		<g id="shape39" transform="translate(279.043,-704.409)" class="spst_on">
+			
+			
+			
+			<desc>X2</desc>
+			<g id="shape40-57" transform="translate(8.84409,-18.4694)">
+				
+				<path d="M0 841.89 L19.16 841.89" class="st3" />
+			</g>
+			<g id="shape41-60" transform="translate(1.12458E-05,-14.0488)">
+				
+				<path d="M36.85 837.47 A4.42205 4.42205 0 1 1 28.01 837.47 A4.42205 4.42205 0 1 1 36.85 837.47" class="st6" />
+				<path d="M8.84 837.47 A4.42205 4.42205 0 1 1 -0 837.47 A4.42205 4.42205 0 1 1 8.84 837.47" class="st6" />
+			</g>
+			<g id="shape39-64">
+				
+				
+				<text x="13.3" y="838.99" class="st5">X2</text>			</g>
+		</g>
+	</g>
+</svg>
+  </div>
+  
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <filter id="hover">
+        <feMorphology operator="dilate" radius="4"></feMorphology>
+	      
+        <feColorMatrix type="matrix" values="
+                       1.00 1.00 1.00 1.00 1.00
+                       1.00 1.00 1.00 1.00 1.00
+                       0.00 0.00 0.00 0.00 0.00
+                       0 0 0 0.30 0" result="matrix" />
+        <feBlend in="SourceGraphic" in2="matrix" mode="normal" />
+      </filter>
+
+      <filter id="select">
+        <feMorphology operator="dilate" radius="4"></feMorphology>
+	      
+        <feColorMatrix type="matrix" values="
+                       1.00 1.00 1.00 1.00 1.00
+                       1.00 1.00 1.00 1.00 1.00
+                       0.00 0.00 0.00 0.00 0.00
+                       0 0 0 0.90 0" result="matrix" />
+        <feBlend in="SourceGraphic" in2="matrix" mode="normal" />
+      </filter>
+      <filter id="hyperlink">
+        <feMorphology operator="dilate" radius="4"></feMorphology>
+	      
+        <feColorMatrix type="matrix" values="
+                       0.00 0.00 0.00 0.00 0.00
+                       0.00 0.00 0.00 0.00 0.00
+                       1.00 1.00 1.00 1.00 1.00
+                       0 0 0 0.30 0" result="matrix" />
+        <feBlend in="SourceGraphic" in2="matrix" mode="normal" />
+      </filter>
+    </defs>
+  </svg>
+  <script type="text/javascript">(function (diagram) { const lamp = document.getElementById('lamp');
+
+// current state (on/off)
+let toggled = true;
+
+const setToggle = (val) => {
+    // change value
+    toggled = val;
+
+    // changle "lamp" color
+    lamp.querySelector('ellipse').style.fill = val ? 'yellow' : 'white';
+    
+    // show/hide switches dependin on the state
+    for (const node of document.querySelectorAll('.spst_off')) {
+        node.style.display = val ? 'block' : 'none';
+    }
+    for (const node of document.querySelectorAll('.spst_on')) {
+        node.style.display = val ? 'none' : 'block';
+    }
+}
+
+// click even handler
+lamp.addEventListener('click', () => setToggle(!toggled));
+
+// default config
+setToggle(false);
+ })(window.svgpublish);</script>
+</body>
+</html>
